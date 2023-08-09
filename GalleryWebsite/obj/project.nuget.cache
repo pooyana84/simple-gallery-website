@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Tv3E2QbwoocWTNDrJXOHrvy53+1SQisrdp7ZJufqUu7sEkKlVaLOAwalAbtSbsvdta3w+gy2IcdPDfwALjnxRA==",
+  "success": true,
+  "projectFilePath": "/home/pooya/programming/simple-gallery-website/GalleryWebsite/GalleryWebsite.csproj",
+  "expectedPackageFiles": [
+    "/home/pooya/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.9/microsoft.aspnetcore.app.ref.7.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}
