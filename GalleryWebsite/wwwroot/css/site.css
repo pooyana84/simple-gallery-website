@@ -5,6 +5,26 @@ body {
 p {
   margin: 0px;
 }
+li {
+  list-style: none;
+}
+header {
+  padding: 0px;
+  background-color: #1a1a24;
+  width: 100%;
+  color: #e6e6f1;
+}
+.header-nav {
+  padding: 0px;
+}
+.header-nav-list {
+  margin: 0px;
+  padding: 10px;
+}
+.header-nav-item {
+  display: inline;
+  margin: 10px 10px;
+}
 footer {
   padding: 0px;
   background-color: #1a1a24;
