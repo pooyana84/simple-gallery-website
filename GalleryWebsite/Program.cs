@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using GalleryWebsite.Data;
+using GalleryWebsite.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ImageContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("ImageContext") ?? throw new InvalidOperationException("Connection string 'ImageContext' not found.")));
@@ -9,6 +11,13 @@ builder.Services.AddDbContext<ImageContext>(options =>
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    SeedData.Initialize(services);
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
