@@ -18,7 +18,23 @@ namespace GalleryWebsite.Controllers
         {
             _context = context;
         }
+        // GET: Image/Display/5
+        public async Task<IActionResult> Display(int? id)
+        {
+            if (id == null || _context.Image == null)
+            {
+                return NotFound();
+            }
 
+            var image = await _context.Image
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (image == null)
+            {
+                return NotFound();
+            }
+
+            return View(image);
+        }
         // GET: Image
         public async Task<IActionResult> Index()
         {

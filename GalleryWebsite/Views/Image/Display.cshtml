@@ -1,0 +1,21 @@
+@model GalleryWebsite.Models.Image
+
+@{
+    ViewData["Title"] = "Display";
+}
+
+<img width="100%" style="border-radius:20px;"src="~/Images/@(Model.Id).jpg" />
+<div style="padding: 50px;">
+    <p>
+        @Html.DisplayFor(model => model.Location)
+    </p>
+    <p>
+        @Html.DisplayFor(model => model.Photographer)
+    </p>
+    <p>
+        @Html.DisplayFor(model => model.DateTime)
+    </p>
+    <p>
+        @Html.DisplayFor(model => model.Tags)
+    </p>
+</div>
